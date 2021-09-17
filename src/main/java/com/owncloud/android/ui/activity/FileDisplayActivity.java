@@ -47,6 +47,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Parcelable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -224,6 +225,11 @@ public class FileDisplayActivity extends HookActivity
 
         /// Load of saved instance state
         if (savedInstanceState != null) {
+
+            /** Themis-#4026 */
+            Log.i("Themis-#4026", "Step 2: Get back to NextCloud's FileDisplayActivity.");
+            /** Themis-#4026 */
+
             mWaitingToPreview = savedInstanceState.getParcelable(FileDisplayActivity.KEY_WAITING_TO_PREVIEW);
             mSyncInProgress = savedInstanceState.getBoolean(KEY_SYNC_IN_PROGRESS);
             mWaitingToSend = savedInstanceState.getParcelable(FileDisplayActivity.KEY_WAITING_TO_SEND);

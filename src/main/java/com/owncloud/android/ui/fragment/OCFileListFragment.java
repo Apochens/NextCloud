@@ -36,6 +36,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -217,6 +218,11 @@ public class OCFileListFragment extends ExtendedListFragment implements
 
     @Override
     public void onResume() {
+
+        /** Themis-#4026 */
+        Log.i("Themis-#4026", "Step 1: Opened NextCloud into FileDisplayActivity.");
+        /** Themis-#4026 */
+
         if (getActivity() == null) {
             return;
         }

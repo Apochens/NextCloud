@@ -7,8 +7,9 @@
 
 buildscript {
     repositories {
+        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/google'}
         google()
-        jcenter()
         maven {
             url 'https://oss.sonatype.org/content/repositories/snapshots/'
         }
@@ -48,8 +49,9 @@ ext {
 }
 
 repositories {
+    maven{url'https://maven.aliyun.com/repository/public'}
+    maven{url'https://maven.aliyun.com/repository/google'}
     google()
-    jcenter()
     maven { url "https://jitpack.io" }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
 
