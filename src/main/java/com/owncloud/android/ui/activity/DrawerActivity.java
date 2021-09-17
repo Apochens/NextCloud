@@ -42,6 +42,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.Html;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -449,6 +450,11 @@ public abstract class DrawerActivity extends ToolbarActivity
                 startActivity(NotificationsActivity.class);
                 break;
             case R.id.nav_synced_folders:
+
+                /** Themis-#4792 */
+                Log.i("Themis-#4792", "Step 3: Selected \"Set up a custom folder\" in menu.");
+                /** Themis-#4792 */
+
                 startActivity(SyncedFoldersActivity.class);
                 break;
             case R.id.nav_contacts:

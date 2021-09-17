@@ -25,6 +25,7 @@ import android.content.DialogInterface;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -135,6 +136,10 @@ public class CreateFolderDialogFragment
 
                 return;
             }
+
+            /** Themis-#4792 */
+            Log.i("Themis-#4792", "Step 6: Successfully created a new folder. The crash will occur.");
+            /** Themis-#4792 */
 
             String path = mParentFolder.getRemotePath() + newFolderName + OCFile.PATH_SEPARATOR;
             ((ComponentsGetter) getActivity()).getFileOperationsHelper().createFolder(path, false);

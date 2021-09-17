@@ -305,6 +305,11 @@ public class FolderPickerActivity extends FileActivity implements FileFragment.C
         boolean retval = true;
         switch (item.getItemId()) {
             case R.id.action_create_dir: {
+
+                /** Themis-#4792 */
+                Log.i("Themis-#4792", "Step 5: Selected \"New folder\" in menu.");
+                /** Themis-#4792 */
+
                 CreateFolderDialogFragment dialog = CreateFolderDialogFragment.newInstance(getCurrentFolder());
                 dialog.show(getSupportFragmentManager(), CreateFolderDialogFragment.CREATE_FOLDER_FRAGMENT);
                 break;

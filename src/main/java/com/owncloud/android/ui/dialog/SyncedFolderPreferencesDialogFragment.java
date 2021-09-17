@@ -29,6 +29,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.text.style.StyleSpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -373,6 +374,11 @@ public class SyncedFolderPreferencesDialogFragment extends DialogFragment {
         view.findViewById(R.id.remote_folder_container).setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                /** Themis-#4792 */
+                Log.i("Themis-#4792", "Step 4: Selected \"Remote folder\" in \"Create new custom folder setup\".");
+                /** Themis-#4792 */
+
                 Intent action = new Intent(getActivity(), FolderPickerActivity.class);
                 getActivity().startActivityForResult(action, REQUEST_CODE__SELECT_REMOTE_FOLDER);
             }
