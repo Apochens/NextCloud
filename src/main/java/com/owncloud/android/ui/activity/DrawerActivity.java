@@ -44,6 +44,7 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.text.Html;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -455,6 +456,11 @@ public abstract class DrawerActivity extends ToolbarActivity
                 startActivity(NotificationsActivity.class);
                 break;
             case R.id.nav_synced_folders:
+
+                /** Themis-#5173 */
+                Log.i("Themis-#5173", "Step 2: Selected \"Auto upload\" in drawer.");
+                /** Themis-#5173 */
+
                 startActivity(SyncedFoldersActivity.class);
                 break;
             case R.id.nav_contacts:

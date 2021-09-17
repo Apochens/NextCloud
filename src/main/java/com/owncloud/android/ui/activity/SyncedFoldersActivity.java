@@ -575,6 +575,11 @@ public class SyncedFoldersActivity extends FileActivity implements SyncedFolderA
             }
 
             case R.id.action_create_custom_folder: {
+
+                /** Themis-#5173 */
+                Log.i("Themis-#5173", "Step 3: Selected \"Set up a custom folder\" in menu.");
+                /** Themis-#5173 */
+
                 Log.d(TAG, "Show custom folder dialog");
                 SyncedFolderDisplayItem emptyCustomFolder = new SyncedFolderDisplayItem(
                     SyncedFolder.UNPERSISTED_ID, null, null, true, false,

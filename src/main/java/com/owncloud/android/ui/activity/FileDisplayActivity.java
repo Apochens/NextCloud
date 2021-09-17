@@ -45,6 +45,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Parcelable;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -870,6 +871,11 @@ public class FileDisplayActivity extends FileActivity
                     onBackPressed();
 
                 } else {
+
+                    /** Themis-#5173 */
+                    Log.i("Themis-#5173", "Step 1: Opened drawer.");
+                    /** Themis-#5173 */
+
                     openDrawer();
                 }
                 break;
