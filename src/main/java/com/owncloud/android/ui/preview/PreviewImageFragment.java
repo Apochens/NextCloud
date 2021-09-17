@@ -39,6 +39,7 @@ import android.support.annotation.StringRes;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -422,6 +423,11 @@ public class PreviewImageFragment extends FileFragment {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_send_share_file:
+
+                /** Themis-#1918 */
+                Log.i("Themis-#1918", "Step 3: Clicked the \"Send/Share\" button in menu of Previewimage. Bug will occur.");
+                /** Themis-#1918 */
+
                 if(getFile().isSharedWithMe() && !getFile().canReshare()){
                     Snackbar.make(getView(),
                             R.string.resharing_is_not_allowed,

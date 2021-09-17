@@ -40,6 +40,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
@@ -870,6 +871,10 @@ public class OCFileListFragment extends ExtendedListFragment implements OCFileLi
     @Override
     public void onItemClick(AdapterView<?> l, View v, int position, long id) {
         OCFile file = (OCFile) mAdapter.getItem(position);
+
+        /** Themis-#1918 */
+        Log.i("Themis-#1918", "Step 1: Click a item in the list.");
+        /** Themis-#1918 */
 
         if (file != null) {
             if (file.isFolder()) {
