@@ -227,7 +227,7 @@ public class FileDisplayActivity extends HookActivity
         if (savedInstanceState != null) {
 
             /** Themis-#4026 */
-            Log.i("Themis-#4026", "Step 2: Get back to NextCloud's FileDisplayActivity.");
+            Log.i("Themis", "Step 2: Get back to NextCloud's FileDisplayActivity.");
             /** Themis-#4026 */
 
             mWaitingToPreview = savedInstanceState.getParcelable(FileDisplayActivity.KEY_WAITING_TO_PREVIEW);
