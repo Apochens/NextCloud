@@ -873,7 +873,7 @@ public class FileDisplayActivity extends FileActivity
                 } else {
 
                     /** Themis-#5173 */
-                    Log.i("Themis-#5173", "Step 1: Opened drawer.");
+                    Log.i("Themis", "Step 1: Opened drawer.");
                     /** Themis-#5173 */
 
                     openDrawer();

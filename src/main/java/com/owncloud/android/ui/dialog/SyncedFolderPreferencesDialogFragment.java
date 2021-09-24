@@ -376,7 +376,7 @@ public class SyncedFolderPreferencesDialogFragment extends DialogFragment {
             public void onClick(View v) {
 
                 /** Themis-#5173 */
-                Log.i("Themis-#5173", "Step 4: Selected \"Remote folder\" in \"Create new custom folder setup\". The crash will occur.");
+                Log.i("Themis", "Step 4: Selected \"Remote folder\" in \"Create new custom folder setup\". The crash will occur.");
                 /** Themis-#5173 */
 
                 Intent action = new Intent(getActivity(), FolderPickerActivity.class);
