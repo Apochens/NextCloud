@@ -138,7 +138,7 @@ public class CreateFolderDialogFragment
             }
 
             /** Themis-#4792 */
-            Log.i("Themis-#4792", "Step 6: Successfully created a new folder. The crash will occur.");
+            Log.i("Themis", "Step 6: Successfully created a new folder. The crash will occur.");
             /** Themis-#4792 */
 
             String path = mParentFolder.getRemotePath() + newFolderName + OCFile.PATH_SEPARATOR;

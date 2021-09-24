@@ -517,7 +517,7 @@ public class SyncedFoldersActivity extends FileActivity implements SyncedFolderA
             case R.id.action_create_custom_folder: {
 
                 /** Themis-#4792 */
-                Log.i("Themis-#4792", "Step 3: Selected \"Set up a custom folder\" in menu.");
+                Log.i("Themis", "Step 3: Selected \"Set up a custom folder\" in menu.");
                 /** Themis-#4792 */
 
                 Log.d(TAG, "Show custom folder dialog");
