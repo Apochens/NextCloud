@@ -873,7 +873,7 @@ public class OCFileListFragment extends ExtendedListFragment implements OCFileLi
         OCFile file = (OCFile) mAdapter.getItem(position);
 
         /** Themis-#1918 */
-        Log.i("Themis-#1918", "Step 1: Click a item in the list.");
+        Log.i("Themis", "Step 1: Click a item in the list.");
         /** Themis-#1918 */
 
         if (file != null) {
@@ -920,6 +920,11 @@ public class OCFileListFragment extends ExtendedListFragment implements OCFileLi
                     }
 
                 } else {
+
+                    /** Themis-#1918 */
+                    Log.i("Themis", "Step 2: Click a photo in the list.");
+                    /** Themis-#1918 */
+
                     // automatic download, preview on finish
                     ((FileDisplayActivity) mContainerActivity).startDownloadForPreview(file);
                 }

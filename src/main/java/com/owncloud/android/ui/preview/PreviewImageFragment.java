@@ -425,7 +425,7 @@ public class PreviewImageFragment extends FileFragment {
             case R.id.action_send_share_file:
 
                 /** Themis-#1918 */
-                Log.i("Themis-#1918", "Step 3: Clicked the \"Send/Share\" button in menu of Previewimage. Bug will occur.");
+                Log.i("Themis", "Step 3: Clicked the \"Send/Share\" button in menu of Previewimage. Bug will occur.");
                 /** Themis-#1918 */
 
                 if(getFile().isSharedWithMe() && !getFile().canReshare()){
