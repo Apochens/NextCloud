@@ -7,9 +7,9 @@
 
 buildscript {
     repositories {
-        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/central'}
         maven{url'https://maven.aliyun.com/repository/google'}
-        google()
+        maven{url'https://maven.aliyun.com/repository/jcenter'}
         maven {
             url 'https://oss.sonatype.org/content/repositories/snapshots/'
         }
@@ -27,8 +27,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'checkstyle'
 apply plugin: 'pmd'
 apply plugin: 'findbugs'
-apply plugin: 'jacoco-android'
-apply plugin: 'jacoco'
+//apply plugin: 'jacoco-android'
+//apply plugin: 'jacoco'
 
 configurations.all {
     exclude group: 'com.google.firebase', module: 'firebase-core'
@@ -49,12 +49,11 @@ ext {
 }
 
 repositories {
-    maven{url'https://maven.aliyun.com/repository/public'}
+    maven{url'https://maven.aliyun.com/repository/central'}
     maven{url'https://maven.aliyun.com/repository/google'}
-    google()
+    maven{url'https://maven.aliyun.com/repository/jcenter'}
     maven { url "https://jitpack.io" }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
-
     flatDir {
         dirs 'libs'
     }

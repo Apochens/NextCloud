@@ -220,7 +220,7 @@ public class OCFileListFragment extends ExtendedListFragment implements
     public void onResume() {
 
         /** Themis-#4026 */
-        Log.i("Themis", "Step 1: Opened NextCloud into FileDisplayActivity.");
+        Log.i("Themis", "Event 1: Opened app NextCloud.");
         /** Themis-#4026 */
 
         if (getActivity() == null) {
