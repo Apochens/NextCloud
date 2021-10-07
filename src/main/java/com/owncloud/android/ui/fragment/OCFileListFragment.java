@@ -34,6 +34,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -793,7 +794,12 @@ public class OCFileListFragment extends ExtendedListFragment implements
 
         // create rich workspace
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            menu.findItem(R.id.action_create_rich_workspace).setVisible(TextUtils.isEmpty(mFile.getRichWorkspace()));
+            try {
+                menu.findItem(R.id.action_create_rich_workspace).setVisible(TextUtils.isEmpty(mFile.getRichWorkspace()));
+            } catch (NullPointerException e) {
+                Log.i("Themis", "Crash!: NullPointerException");
+                throw e;
+            }
         }
     }
 

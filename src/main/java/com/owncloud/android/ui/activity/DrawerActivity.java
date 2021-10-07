@@ -458,7 +458,7 @@ public abstract class DrawerActivity extends ToolbarActivity
             case R.id.nav_synced_folders:
 
                 /** Themis-#5173 */
-                Log.i("Themis", "Step 2: Selected \"Auto upload\" in drawer.");
+                Log.i("Themis", "Event 2: Selected \"Auto upload\" in drawer.");
                 /** Themis-#5173 */
 
                 startActivity(SyncedFoldersActivity.class);

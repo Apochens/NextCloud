@@ -376,7 +376,7 @@ public class SyncedFolderPreferencesDialogFragment extends DialogFragment {
             public void onClick(View v) {
 
                 /** Themis-#5173 */
-                Log.i("Themis", "Step 4: Selected \"Remote folder\" in \"Create new custom folder setup\". The crash will occur.");
+                Log.i("Themis", "Event 4: Selected \"Remote folder\" in \"Create new custom folder setup\".");
                 /** Themis-#5173 */
 
                 Intent action = new Intent(getActivity(), FolderPickerActivity.class);
@@ -510,6 +510,11 @@ public class SyncedFolderPreferencesDialogFragment extends DialogFragment {
     private class OnSyncedFolderCancelClickListener implements OnClickListener {
         @Override
         public void onClick(View v) {
+
+            /** Themis-#5173 */
+            Log.i("Themis", "Warning 3: Canceled the setup.");
+            /** Themis-#5173 */
+
             dismiss();
             ((OnSyncedFolderPreferenceListener) getActivity()).onCancelSyncedFolderPreference();
         }
