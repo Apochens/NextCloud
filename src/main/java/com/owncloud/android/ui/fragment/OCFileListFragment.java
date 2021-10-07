@@ -872,10 +872,6 @@ public class OCFileListFragment extends ExtendedListFragment implements OCFileLi
     public void onItemClick(AdapterView<?> l, View v, int position, long id) {
         OCFile file = (OCFile) mAdapter.getItem(position);
 
-        /** Themis-#1918 */
-        Log.i("Themis", "Step 1: Click a item in the list.");
-        /** Themis-#1918 */
-
         if (file != null) {
             if (file.isFolder()) {
                 // update state and view of this fragment
@@ -904,6 +900,11 @@ public class OCFileListFragment extends ExtendedListFragment implements OCFileLi
                         }
                         ((FileDisplayActivity) mContainerActivity).startImagePreview(file, type, !file.isDown());
                     } else {
+
+                        /** Themis-#1918 */
+                        Log.i("Themis", "Event 1: Clicked a photo in the list.");
+                        /** Themis-#1918 */
+
                         ((FileDisplayActivity) mContainerActivity).startImagePreview(file, !file.isDown());
                     }
                 } else if (file.isDown() && MimeTypeUtil.isVCard(file)) {
@@ -920,11 +921,6 @@ public class OCFileListFragment extends ExtendedListFragment implements OCFileLi
                     }
 
                 } else {
-
-                    /** Themis-#1918 */
-                    Log.i("Themis", "Step 2: Click a photo in the list.");
-                    /** Themis-#1918 */
-
                     // automatic download, preview on finish
                     ((FileDisplayActivity) mContainerActivity).startDownloadForPreview(file);
                 }

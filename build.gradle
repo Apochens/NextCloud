@@ -7,12 +7,12 @@
 
 buildscript {
     repositories {
-        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/central'}
         maven{url'https://maven.aliyun.com/repository/google'}
+        maven{url'https://maven.aliyun.com/repository/jcenter'}
         maven {
             url 'https://oss.sonatype.org/content/repositories/snapshots/'
         }
-        google()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.1.4'
@@ -24,12 +24,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'checkstyle'
 apply plugin: 'pmd'
 apply plugin: 'findbugs'
-apply plugin: 'jacoco'
+//apply plugin: 'jacoco'
 
 
-jacoco {
-    toolVersion = "0.8.5"
-}
+//jacoco {
+//    toolVersion = "0.8.5"
+//}
 configurations.all {
     // check for updates every build
     resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
@@ -46,12 +46,11 @@ ext {
 }
 
 repositories {
-    maven{url'https://maven.aliyun.com/repository/public'}
+    maven{url'https://maven.aliyun.com/repository/central'}
     maven{url'https://maven.aliyun.com/repository/google'}
+    maven{url'https://maven.aliyun.com/repository/jcenter'}
     maven { url "https://jitpack.io" }
     maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
-    google()
-
     flatDir {
         dirs 'libs'
     }

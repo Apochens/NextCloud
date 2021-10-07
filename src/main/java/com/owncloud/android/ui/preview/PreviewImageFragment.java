@@ -425,7 +425,7 @@ public class PreviewImageFragment extends FileFragment {
             case R.id.action_send_share_file:
 
                 /** Themis-#1918 */
-                Log.i("Themis", "Step 3: Clicked the \"Send/Share\" button in menu of Previewimage. Bug will occur.");
+                Log.i("Themis", "Event 2: Clicked the \"Send/Share\" button in menu of Previewimage.");
                 /** Themis-#1918 */
 
                 if(getFile().isSharedWithMe() && !getFile().canReshare()){
@@ -435,8 +435,13 @@ public class PreviewImageFragment extends FileFragment {
                     )
                             .show();
                 } else {
-                    mContainerActivity.getFileOperationsHelper().sendShareFile(getFile(),
-                        (FileDisplayActivity) mContainerActivity);
+                    try {
+                        mContainerActivity.getFileOperationsHelper().sendShareFile(getFile(),
+                                (FileDisplayActivity) mContainerActivity);
+                    } catch (ClassCastException e) {
+                        Log.i("Themis", "Crash!: ClassCastException.");
+                        throw e;
+                    }
                 }
                 return true;
 
