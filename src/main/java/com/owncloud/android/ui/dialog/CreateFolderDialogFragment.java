@@ -41,6 +41,7 @@ import com.owncloud.android.utils.DisplayUtils;
 import com.owncloud.android.utils.ThemeUtils;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
 
@@ -138,11 +139,21 @@ public class CreateFolderDialogFragment
             }
 
             /** Themis-#4792 */
-            Log.i("Themis", "Step 6: Successfully created a new folder. The crash will occur.");
+            Log.i("Themis", "Event 6: Typed some chars and pressed \"Create\".");
             /** Themis-#4792 */
 
-            String path = mParentFolder.getRemotePath() + newFolderName + OCFile.PATH_SEPARATOR;
+            String path;
+            try {
+                path = mParentFolder.getRemotePath() + newFolderName + OCFile.PATH_SEPARATOR;
+            } catch (NullPointerException e) {
+                Log.i("Themis", "Crash!: NullPointerException.");
+                throw e;
+            }
             ((ComponentsGetter) getActivity()).getFileOperationsHelper().createFolder(path, false);
+        } else {
+            /** Themis-#4792 */
+            Log.i("Themis", "Warning 6: Canceled creating a new folder.");
+            /** Themis-#4792 */
         }
     }
 }
