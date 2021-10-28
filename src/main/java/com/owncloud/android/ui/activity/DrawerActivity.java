@@ -467,9 +467,9 @@ public abstract class DrawerActivity extends ToolbarActivity
                 startActivity(CommunityActivity.class);
                 break;
             case R.id.nav_logout:
-                mCheckedMenuItem = -1;
-                menuItem.setChecked(false);
-                UserInfoActivity.openAccountRemovalConfirmationDialog(getAccount(), getSupportFragmentManager());
+//                mCheckedMenuItem = -1;
+//                menuItem.setChecked(false);
+//                UserInfoActivity.openAccountRemovalConfirmationDialog(getAccount(), getSupportFragmentManager());
                 break;
             case R.id.nav_shared:
                 handleSearchEvents(new SearchEvent("",
