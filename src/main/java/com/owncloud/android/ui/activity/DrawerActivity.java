@@ -473,9 +473,9 @@ public abstract class DrawerActivity extends ToolbarActivity
                 startActivity(CommunityActivity.class);
                 break;
             case R.id.nav_logout:
-                mCheckedMenuItem = -1;
-                menuItem.setChecked(false);
-                UserInfoActivity.openAccountRemovalConfirmationDialog(getAccount(), getSupportFragmentManager());
+//                mCheckedMenuItem = -1;
+//                menuItem.setChecked(false);
+//                UserInfoActivity.openAccountRemovalConfirmationDialog(getAccount(), getSupportFragmentManager());
                 break;
             case R.id.nav_shared:
                 handleSearchEvents(new SearchEvent("",
@@ -517,18 +517,18 @@ public abstract class DrawerActivity extends ToolbarActivity
                 boolean isProviderOrOwnInstallationVisible = getResources()
                     .getBoolean(R.bool.show_provider_or_own_installation);
 
-                if (isProviderOrOwnInstallationVisible) {
-                    Intent firstRunIntent = new Intent(getApplicationContext(), FirstRunActivity.class);
-                    firstRunIntent.putExtra(FirstRunActivity.EXTRA_ALLOW_CLOSE, true);
-                    startActivity(firstRunIntent);
-                } else {
-                    createAccount(false);
-                }
+//                if (isProviderOrOwnInstallationVisible) {
+//                    Intent firstRunIntent = new Intent(getApplicationContext(), FirstRunActivity.class);
+//                    firstRunIntent.putExtra(FirstRunActivity.EXTRA_ALLOW_CLOSE, true);
+//                    startActivity(firstRunIntent);
+//                } else {
+//                    createAccount(false);
+//                }
                 break;
 
             case R.id.drawer_menu_account_manage:
-                Intent manageAccountsIntent = new Intent(getApplicationContext(), ManageAccountsActivity.class);
-                startActivityForResult(manageAccountsIntent, ACTION_MANAGE_ACCOUNTS);
+//                Intent manageAccountsIntent = new Intent(getApplicationContext(), ManageAccountsActivity.class);
+//                startActivityForResult(manageAccountsIntent, ACTION_MANAGE_ACCOUNTS);
                 break;
 
             default:
