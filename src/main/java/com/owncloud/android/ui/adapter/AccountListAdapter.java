@@ -155,11 +155,11 @@ public class AccountListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         boolean isProviderOrOwnInstallationVisible = context.getResources()
                 .getBoolean(R.bool.show_provider_or_own_installation);
 
-        if (isProviderOrOwnInstallationVisible) {
-            actionView.setOnClickListener(v -> accountListAdapterListener.showFirstRunActivity());
-        } else {
-            actionView.setOnClickListener(v -> accountListAdapterListener.createAccount());
-        }
+//        if (isProviderOrOwnInstallationVisible) {
+//            actionView.setOnClickListener(v -> accountListAdapterListener.showFirstRunActivity());
+//        } else {
+//            actionView.setOnClickListener(v -> accountListAdapterListener.createAccount());
+//        }
     }
 
     /**
