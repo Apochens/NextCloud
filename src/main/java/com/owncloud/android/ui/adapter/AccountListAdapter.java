@@ -129,7 +129,8 @@ public class AccountListAdapter extends ArrayAdapter<AccountListItem> implements
         actionView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListener.createAccount();
+                /** Themis-#1918 **/
+//                mListener.createAccount();
             }
         });
         return actionView;
