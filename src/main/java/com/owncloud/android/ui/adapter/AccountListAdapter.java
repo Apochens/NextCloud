@@ -130,12 +130,12 @@ public class AccountListAdapter extends ArrayAdapter<AccountListItem> implements
         // bind action listener
         boolean isProviderOrOwnInstallationVisible = mContext.getResources()
                 .getBoolean(R.bool.show_provider_or_own_installation);
-
-        if (isProviderOrOwnInstallationVisible) {
-            actionView.setOnClickListener(v -> mListener.showFirstRunActivity());
-        } else {
-            actionView.setOnClickListener(v -> mListener.createAccount());
-        }
+        /** Themis-#4026 **/
+//        if (isProviderOrOwnInstallationVisible) {
+//            actionView.setOnClickListener(v -> mListener.showFirstRunActivity());
+//        } else {
+//            actionView.setOnClickListener(v -> mListener.createAccount());
+//        }
 
         return actionView;
     }

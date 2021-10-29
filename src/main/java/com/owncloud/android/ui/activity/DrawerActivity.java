@@ -462,16 +462,16 @@ public abstract class DrawerActivity extends ToolbarActivity implements DisplayU
 //                UserInfoActivity.openAccountRemovalConfirmationDialog(getAccount(), getSupportFragmentManager(), true);
                 break;
             case R.id.drawer_menu_account_add:
-                boolean isProviderOrOwnInstallationVisible = getResources()
-                        .getBoolean(R.bool.show_provider_or_own_installation);
-
-                if (isProviderOrOwnInstallationVisible) {
-                    Intent firstRunIntent = new Intent(getApplicationContext(), FirstRunActivity.class);
-                    firstRunIntent.putExtra(FirstRunActivity.EXTRA_ALLOW_CLOSE, true);
-                    startActivity(firstRunIntent);
-                } else {
-                    createAccount(false);
-                }
+//                boolean isProviderOrOwnInstallationVisible = getResources()
+//                        .getBoolean(R.bool.show_provider_or_own_installation);
+//
+//                if (isProviderOrOwnInstallationVisible) {
+//                    Intent firstRunIntent = new Intent(getApplicationContext(), FirstRunActivity.class);
+//                    firstRunIntent.putExtra(FirstRunActivity.EXTRA_ALLOW_CLOSE, true);
+//                    startActivity(firstRunIntent);
+//                } else {
+//                    createAccount(false);
+//                }
                 break;
             case R.id.drawer_menu_account_manage:
                 Intent manageAccountsIntent = new Intent(getApplicationContext(), ManageAccountsActivity.class);
