@@ -26,6 +26,7 @@ import android.graphics.Bitmap;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -66,7 +67,12 @@ public abstract class ToolbarActivity extends BaseActivity {
         int fontColor = ThemeUtils.fontColor(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        try {
+            setSupportActionBar(toolbar);
+        } catch(IllegalStateException e) {
+            Log.i("Themis", "Crash!");
+            throw e;
+        }
 
         mProgressBar = findViewById(R.id.progressBar);
         if (mProgressBar != null) {
