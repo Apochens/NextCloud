@@ -152,7 +152,7 @@ public class CreateFolderDialogFragment
             ((ComponentsGetter) getActivity()).getFileOperationsHelper().createFolder(path, false);
         } else {
             /** Themis-#4792 */
-            Log.i("Themis", "Warning 6: Canceled creating a new folder.");
+            Log.i("Themis", "Warning 5: Canceled creating a new folder.");
             /** Themis-#4792 */
         }
     }
