@@ -431,13 +431,13 @@ public abstract class DrawerActivity extends ToolbarActivity
 
                 break;
             case R.id.nav_favorites:
-                handleSearchEvents(new SearchEvent("",
-                                                   SearchRemoteOperation.SearchType.FAVORITE_SEARCH,
-                                                   SearchEvent.UnsetType.NO_UNSET),
-                                   menuItem.getItemId());
+//                handleSearchEvents(new SearchEvent("",
+//                                                   SearchRemoteOperation.SearchType.FAVORITE_SEARCH,
+//                                                   SearchEvent.UnsetType.NO_UNSET),
+//                                   menuItem.getItemId());
                 break;
             case R.id.nav_photos:
-                startPhotoSearch(menuItem);
+//                startPhotoSearch(menuItem);
                 break;
             case R.id.nav_on_device:
                 EventBus.getDefault().post(new ChangeMenuEvent());

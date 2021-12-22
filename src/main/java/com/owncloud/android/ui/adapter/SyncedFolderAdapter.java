@@ -286,6 +286,11 @@ public class SyncedFolderAdapter extends SectionedRecyclerViewAdapter<SectionedV
     }
 
     private void onOverflowIconClicked(int section, SyncedFolderDisplayItem item, View view) {
+
+        /** Themis-#5173 Setting(Three dots)*/
+
+        /** Themis-#5173 */
+
         PopupMenu popup = new PopupMenu(context, view);
         popup.inflate(R.menu.synced_folders_adapter);
         popup.setOnMenuItemClickListener(i -> optionsItemSelected(i, section, item));
@@ -301,6 +306,10 @@ public class SyncedFolderAdapter extends SectionedRecyclerViewAdapter<SectionedV
             clickListener.onVisibilityToggleClick(section, item);
         } else {
             // default: R.id.action_create_custom_folder
+
+            /** Themis-#5173 configure */
+
+            /** Themis-#5173 */
             clickListener.onSyncFolderSettingsClick(section, item);
         }
         return true;

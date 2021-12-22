@@ -797,7 +797,7 @@ public class OCFileListFragment extends ExtendedListFragment implements
             try {
                 menu.findItem(R.id.action_create_rich_workspace).setVisible(TextUtils.isEmpty(mFile.getRichWorkspace()));
             } catch (NullPointerException e) {
-                Log.i("Themis", "Crash!: NullPointerException");
+                Log.i("Themis", "Crash!: NullPointerException" + e.toString());
                 throw e;
             }
         }
