@@ -139,7 +139,7 @@ public class CreateFolderDialogFragment
             }
 
             /** Themis-#4792 */
-            Log.i("Themis", "Event 6: Typed some chars and pressed \"Create\".");
+            Log.i("Themis", "Event 5: Typed some chars and pressed \"Create\".");
             /** Themis-#4792 */
 
             String path;

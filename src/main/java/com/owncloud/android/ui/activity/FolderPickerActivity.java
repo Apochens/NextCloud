@@ -307,7 +307,7 @@ public class FolderPickerActivity extends FileActivity implements FileFragment.C
             case R.id.action_create_dir: {
 
                 /** Themis-#4792 */
-                Log.i("Themis", "Event 5: Selected \"New folder\" in menu.");
+                Log.i("Themis", "Event 4: Selected \"New folder\" in menu.");
                 /** Themis-#4792 */
 
                 CreateFolderDialogFragment dialog = CreateFolderDialogFragment.newInstance(getCurrentFolder());
@@ -425,7 +425,7 @@ public class FolderPickerActivity extends FileActivity implements FileFragment.C
         if (v.equals(mCancelBtn)) {
 
             /** Themis-#4792 */
-            Log.i("Themis", "Warning 4: Canceled choosing a remote folder.");
+            Log.i("Themis", "Warning 3: Canceled choosing a remote folder.");
             /** Themis-#4792 */
 
             finish();

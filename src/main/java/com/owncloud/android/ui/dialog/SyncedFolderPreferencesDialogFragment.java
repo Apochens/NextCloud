@@ -376,7 +376,7 @@ public class SyncedFolderPreferencesDialogFragment extends DialogFragment {
             public void onClick(View v) {
 
                 /** Themis-#4792 */
-                Log.i("Themis", "Event 4: Selected \"Remote folder\" in \"Create new custom folder setup\".");
+                Log.i("Themis", "Event 3: Selected \"Remote folder\" in \"Create new custom folder setup\".");
                 /** Themis-#4792 */
 
                 Intent action = new Intent(getActivity(), FolderPickerActivity.class);
