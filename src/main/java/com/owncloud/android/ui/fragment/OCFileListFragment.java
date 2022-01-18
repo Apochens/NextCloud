@@ -469,6 +469,9 @@ public class OCFileListFragment extends ExtendedListFragment implements
 
     @Override
     public void onOverflowIconClicked(OCFile file, View view) {
+        /** Themis-#5173  */
+        Log.i("Themis", "Event 4: Clicked the overflow icon of a file item.");
+        /** Themis-#5173  */
         PopupMenu popup = new PopupMenu(getActivity(), view);
         popup.inflate(R.menu.item_file);
         Account currentAccount = ((FileActivity) getActivity()).getAccount();
@@ -1146,6 +1149,7 @@ public class OCFileListFragment extends ExtendedListFragment implements
                 return true;
             }
             case R.id.action_move: {
+                Log.i("Themis", "Event 5: Clicked the \"Move\" in popup menu of file item.");
                 Intent action = new Intent(getActivity(), FolderPickerActivity.class);
                 action.putParcelableArrayListExtra(FolderPickerActivity.EXTRA_FILES, new ArrayList<>(checkedFiles));
                 action.putExtra(FolderPickerActivity.EXTRA_CURRENT_FOLDER, mFile);
@@ -1154,6 +1158,7 @@ public class OCFileListFragment extends ExtendedListFragment implements
                 return true;
             }
             case R.id.action_copy: {
+                Log.i("Themis", "Event 6: Clicked the \"Copy\" in popup menu of file item.");
                 Intent action = new Intent(getActivity(), FolderPickerActivity.class);
                 action.putParcelableArrayListExtra(FolderPickerActivity.EXTRA_FILES, new ArrayList<>(checkedFiles));
                 action.putExtra(FolderPickerActivity.EXTRA_CURRENT_FOLDER, mFile);
